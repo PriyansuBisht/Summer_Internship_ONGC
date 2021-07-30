@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+
+/* FIRST PAGE*/
+
+.First-Page {
+    min-height: 100vh;
+    width: auto;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/F3.jpg);
+    background-position: center;
+    background-size: auto;
+    position: relative;
+    background-repeat: repeat;
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+
+/*NAVAGATION BAR STYLING*/
+
+.navigation {
+    width: 100%;
+    height: 99px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+
+/*ICON STYLING*/
+
+.icon {
+    margin: 0%;
+    padding-left: 50px;
+}
+
+
+/* NAV CENTRAL TEXT STYLING*/
+
+.nav_centre_text h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+/*RIGHT CORNER OF NAV BAR STYLING*/
+
+.right_side {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.nav_right_link {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_right_link a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.nav_right_link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgba(36, 113, 228);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav_right_link:hover::after {
+    width: 100%;
+}
+
+.nav_right_link a:hover {
+    color: rgb(36, 113, 228);
+}
+
+
+/*CENTERAL PART STYLING*/
+
+.center {
+    top: 20%;
+    left: 3%;
+    text-align: left;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-right: 50px;
+    align-items: center;
+    padding-bottom: 90px;
+}
+
+
+/*CENTRE TEXT STYLING*/
+
+.center_text h4 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.center_text H5 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.center_excel_sheet {
+    width: -moz-fit-content;
+    padding-right: 50px;
+}
+
+
+/*TABLE STYLING*/
+
+.center_excel_sheet table {
+    display: table-cell;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid #16ece2;
+    font-weight: 300;
+}
+
+.center_excel_sheet table thead th {
+    background-color: #f34141;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    position: sticky;
+    top: 5px;
+    padding: 10px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.center_excel_sheet table tr:nth-child(even) {
+    background-color: #445a5a;
+}
+
+.center_excel_sheet table tbody tr:hover {
+    background-color: rgba(49, 241, 255, 0.671);
+    color: white;
+}
+
+.center_excel_sheet table tbody td:hover {
+    left: 0;
+    right: 0;
+    background-color: rgba(30, 49, 214, 0.856);
+}
+
+.center_excel_sheet table tbody td {
+    padding: 5px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+	font_weight: 700;
+}
+
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.POP_UP_EDIT_BUTTON {
+    width: 130px;
+}
+
+.POP_UP_EDIT_BUTTON button {
+    width: 130px;
+    height: 45px;
+    background-color: #f83636;
+    border: 4px double wheat;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 40px;
+}
+
+
+/* The POP_UP (background) */
+
+.POP_UP {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* POP_UP_CONTENT */
+
+.POP_UP_CONTENT {
+    position: relative;
+    background-color: #445a5a;
+    margin: auto;
+    border: 5px double whitesmoke;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.6s;
+    animation-name: animatetop;
+    animation-duration: 0.6s;
+    padding: 10px;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 33px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.POP_UP_HEADER {
+    padding: 7px;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+.POP_UP_CONTENT form {
+    padding: 20px;
+}
+
+.POP_UP_CONTENT form label {
+    padding: 20px;
+}
+
+.POP_UP_CONTENT form input {
+    background-color: transparent;
+    border: 2px inset wheat;
+    padding: 3px;
+    text-align: center;
+    height: 20px;
+}
+
+.POP_UP_CONTENT form input[type=text] {
+    width: 300px;
+}
+
+.POP_UP_CONTENT form input[type="submit"] {
+    align-self: center;
+    width: -webkit-fill-available;
+    height: 35px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.5ms;
+}
+
+.POP_UP_CONTENT form input[type="submit"]:hover {
+    background-color: #5a9292;
+}
+
+.SAVE_FILE_OPTION {
+    position: relative;
+    width: 200px;
+    bottom: 5px;
+}
+
+.SAVE_FILE_OPTION form {
+    position: relative;
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+.SAVE_FILE_OPTION form input {
+    position: absolute;
+    width: 100%;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+    color: #f51a1a;
+    font-weight: 700;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(247, 53, 53));
+}
+
+.far {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: -7px;
+    right: 4px;
+    border-radius: 50%;
+    color: #f51a1a;
+    text-align: center;
+    font-size: 37px;
+    transition: all 1s;
+}
+
+.SAVE_FILE_OPTION form:hover {
+    width: 200px;
+    cursor: pointer;
+}
+
+.SAVE_FILE_OPTION form:hover input {
+    display: block;
+}
+
+.SAVE_FILE_OPTION form:hover .fa {
+    background: #07051a;
+    color: white;
+}
+
+.SAVE_FILE_OPTION form input[type='search']::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.SAVE_FILE_OPTION form input[type='search']::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.SAVE_FILE_OPTION form input[type='search']::-webkit-search-decoration,
+.SAVE_FILE_OPTION form input[type='search']::-webkit-search-cancel-button,
+.SAVE_FILE_OPTION form input[type='search']::-webkit-search-results-button,
+.SAVE_FILE_OPTION form input[type='search']::-webkit-search-results-decoration {
+    display: none;
+}
